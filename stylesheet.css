@@ -66,12 +66,6 @@ section{
     color: #fd7b1d;
 }
 
-#menu-icon{
-    font-size: 3.6rem;
-    color: var(--text-color);
-    display: none;
-
-}
 
 .home{
    
@@ -486,4 +480,226 @@ footer-icon a:hover{
 .footer-text{
     font-size:1.5rem;
     color: #fd7b1d;
+}
+#btn-down{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--main-color);
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    font-size: 1.6rem;
+    color: var(--bg-color);
+    letter-spacing: .1rem;
+    font-weight: 600;
+    transition: .5s ease;
+    
+}
+#btn-down:hover{
+    box-shadow: none;
+}
+
+#menu-icon {
+    font-size: 3.6rem;
+    color: var(--text-color);
+    display: none;
+    cursor: pointer;
+}
+/* Media Query for Medium Devices (Tablets) */
+@media (max-width: 1024px) {
+    html {
+        font-size: 55%;
+    }
+
+    .header {
+        padding: 2rem 3%;
+    }
+
+    section {
+        padding: 10rem 3% 2rem;
+    }
+
+    .home {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .home-content {
+        margin-right: 0;
+        margin-top: 4rem;
+    }
+
+    .home-content .btn {
+        display: inline-block;
+        margin: 2rem 1rem;
+    }
+
+    .home-img img {
+        width: 40vw;
+    }
+
+    .about {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .about-img img {
+        width: 40vw;
+        margin-right: 0;
+        margin-top: 4rem;
+    }
+
+    .about-content {
+        text-align: center;
+    }
+
+    .about-content .btn {
+        margin-top: 2rem;
+    }
+
+    .projects-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact .btn {
+        margin: 1rem auto;
+        display: block;
+        max-width: 200px;
+    }
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    html {
+        font-size: 50%;
+    }
+
+    #menu-icon {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: var(--bg-color);
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+        display: none;
+    }
+
+    .navbar.active {
+        display: block;
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    .home {
+        flex-direction: column-reverse;
+    }
+
+    .home-content h1 {
+        font-size: 4.5rem;
+    }
+
+    .home-content .btn {
+        display: block;
+        margin: 2rem auto;
+        width: 80%;
+        max-width: 200px;
+        text-align: center;
+    }
+
+    .home-img img {
+        width: 70vw;
+        margin-top: 4rem;
+    }
+
+    .about {
+        flex-direction: column-reverse;
+    }
+
+    .about img {
+        width: 70vw;
+        margin-top: 4rem;
+    }
+
+    .about-content {
+        text-align: center;
+    }
+
+    .about-content .btn {
+        display: block;
+        margin: 2rem auto;
+        width: 80%;
+        max-width: 200px;
+    }
+
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+
+    .academic-container {
+        flex-direction: column;
+    }
+
+    .contact form .input-box input {
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
+
+    .contact .btn {
+        display: block;
+        margin: 2rem auto;
+        width: 80%;
+        max-width: 200px;
+    }
+
+    .footer {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .footer p {
+        margin-top: 2rem;
+    }
+}
+
+/* Media Query for Small Mobile Devices */
+@media (max-width: 450px) {
+    html {
+        font-size: 45%;
+    }
+
+    .home-img img {
+        width: 90vw;
+    }
+
+    .about-img img {
+        width: 90vw;
+    }
+    .about-content h2{
+        text-align: center;
+    }
+    .home-content .btn,
+    .about-content .btn,
+    .contact .btn {
+        width: 90%;
+    }
+    #btn-down {
+        margin-top: 2rem;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        text-align: center;
+      }
+    
+    .footer {
+        flex-direction: column-reverse;
+    }
 }
