@@ -43,7 +43,7 @@ section{
     padding: 2rem 9%;
     background: var(--bg-color);
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     z-index: 100;
 }
@@ -80,6 +80,9 @@ section{
     align-items: center;
     
 }
+.home-content {
+    margin-right: 15rem;
+}
 .home-content h3{
     font-size: 3.2rem;
     font-weight: 700;
@@ -87,6 +90,12 @@ section{
 }
 .home-content h1{
     font-size: 5.6rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 3rem;
+}
+.home-content p{
+    font-size: 2.2rem;
     font-weight: 700;
     line-height: 1.3;
 }
@@ -117,14 +126,21 @@ span{
 home-content p{
     font-size: 1.6rem;
 }
-
+.social-med {
+    
+    text-align: center;
+    border-radius: 1rem;
+    max-width: 100rem;
+    margin: 0 auto;
+    background:  var(--bg-color);
+}
 .social-med a{
+    
     display: inline-flex;
     justify-content: center;
     align-items: center;
     width:4rem ;
     height: 4rem;
-    background: transparent;
     border: .2rem solid var(--main-color);
     border-radius:  50%;
     font-size: 2rem;
@@ -163,8 +179,9 @@ home-content p{
 }
 
 .about-img img{
-    width: 35vw;
-    border-radius: 24px;
+    width: 30vw;
+    border-radius: 24px; 
+    margin-right: 10rem;
 }
 
 .heading{
@@ -179,9 +196,11 @@ home-content p{
    font-size: 5rem;
 }
 .about-content p{
-    font-size: 1.6rem;
+    font-size: 2rem;
+    font-weight: 700;
     margin: 2rem 0 3rem;
 }
+
 .academic h2{
     margin-bottom: 10rem;
 }
@@ -307,4 +326,164 @@ home-content p{
 section {
     position: relative;
     z-index: 2;
+}
+
+
+.project{
+    background: var(--bg-color);
+}
+.project h2{
+    margin-bottom: 4rem;
+}
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 2rem;
+}
+
+.projects-container .project-box {
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--bg-color);
+    width: 100%;
+    height: 300px; /* Fixed height for consistency */
+    overflow: hidden; /* Important for containing the transformed layer */
+}
+
+.project-box img {
+    width: 100%; /* Full width of container */
+    height: 100%; /* Full height of container */
+    object-fit: cover; /* Maintains aspect ratio while filling container */
+    transition: .5s ease;
+}
+
+.project-box:hover img {
+    transform: scale(1.1);
+}
+
+.project-box .project-layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0.4), var(--main-color));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 4rem;
+    padding-top: 8rem;
+    transform: translateY(100%); /* Starts hidden below */
+    transition: .5s ease;
+}
+
+.project-box:hover .project-layer {
+    transform: translateY(0); /* Slides up on hover */
+}
+
+.project-layer h3 {
+    font-size: 3.4rem; /* Slightly reduced for better fit */
+    margin-bottom: 1rem;
+}
+
+.project-layer p {
+    font-size: 1.4rem;
+    margin: .3rem 0 1rem;
+    
+}
+
+.project-layer i {
+    font-size: 2rem;
+    color: var(--snd-bf-color);
+    background: var(--text-color);
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+}
+.skill{
+    background: var(--snd-bf-color); /* skill baki */
+}
+
+.contact{
+    margin-bottom: 3rem;
+    background: var(--snd-bf-color);
+    
+}
+.contact form{
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.contact form .input-box{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.contact form .input-box input,
+.contact form textarea {
+    width: 100%;
+    padding: 2rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background: var(--snd-bf-color);
+    border-radius: .8rem;
+    margin: 1rem 0;
+}
+.contact form .input-box input{
+    width: 100%;
+}
+.contact form textarea{
+    resize: none;
+
+}
+.contact form .btn{
+     margin-top: 2rem;
+     cursor:pointer;
+}
+.input-container {
+    background: var(--bg-color);
+    padding: 3rem;
+    border-radius: 1rem;
+    max-width: 70rem;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background:  var(--bg-color);
+}
+
+.footer-icon{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    background: var(--main-color);
+    border-radius: .8rem;
+    transition: .5s ease;
+
+}
+footer-icon a:hover{
+    box-shadow: 0 0 1rem var(--main-color);
+}
+.footer-icon a i {
+    font-size: 2.4rem;
+    color:var(--snd-bf-color)
+}
+.footer-text{
+    font-size:1.5rem;
+    color: #fd7b1d;
 }
