@@ -186,6 +186,9 @@ home-content p{
     text-align: left;
     line-height: 1.2;
 }
+.about-content p{
+    text-align: left;
+}
 .about-content h3{
    font-size: 5rem;
 }
@@ -287,6 +290,82 @@ home-content p{
     border-color: var(--main-color);
     transform: scale(1.02);
     box-shadow: 0 0 2rem var(--main-color);
+}
+
+.skill-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem 9%;
+}
+
+.skill-box {
+    background: rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.skill-box:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+}
+
+.skill-box i {
+    font-size: 4rem;
+    color: var(--main-color, #0ef);
+    margin-bottom: 1rem;
+}
+
+.skill-box h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    color: var(--text-color, #fff);
+}
+
+.skill-bar {
+    width: 100%;
+    height: 0.8rem;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.skill-per {
+    height: 100%;
+    background: var(--main-color, #0ef);
+    border-radius: 0.5rem;
+    animation: fillBar 2s forwards;
+    transform-origin: left;
+    position: relative;
+}
+
+.percentage {
+    position: absolute;
+    right: 0.5rem;
+    top: -1.5rem;
+    font-size: 0.9rem;
+    color: var(--text-color, #fff);
+    font-weight: 500;
+}
+
+@keyframes fillBar {
+    from {
+        transform: scaleX(0);
+    }
+    to {
+        transform: scaleX(1);
+    }
+}
+
+@media (max-width: 768px) {
+    .skill-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        padding: 2rem 5%;
+    }
 }
 
 #particles-js {
